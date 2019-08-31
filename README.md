@@ -12,7 +12,7 @@ This is a student project that built on Node.js with Express framework.
 * 研究 Login 相關的 UX。
 
 ## Preview Pages
-![preview](/public/img/preview.jpg)
+<img src="/public/img/preview.jpg" alt="preview" width="500px">
 
 #### 功能
 * 使用 Bootstrap Form 驗證樣式。
