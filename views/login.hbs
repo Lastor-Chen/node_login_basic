@@ -1,0 +1,38 @@
+<div class="container mt-5">
+  {{!-- login 錯誤訊息 --}}
+  {{#if input}}
+  <div class="toast mx-auto" data-autohide="false">
+    <div class="toast-body">
+      <span class="text-danger">Email 或 Password 不符。請重新輸入。</span>
+      <button type="button" class="close" data-dismiss="toast">
+        <span>&times;</span>
+      </button>
+    </div>
+  </div>
+  {{/if}}
+
+  <div class="wrapper">
+    <h2 class="text-center mb-3">Account Login</h2>
+
+    {{!-- form --}}
+    <form action="/login" method="POST" class="needs-validation" novalidate>
+      {{!-- 批次建立 form 內容 --}}
+      {{#each formItem}}
+      <div class="form-group">
+        <label for="{{this.id}}" class="text-capitalize">{{this.id}}:</label>
+        <input type="{{this.id}}" class="form-control" id="{{this.id}}" name="{{this.id}}"
+          placeholder="Input your {{this.id}}" value="{{this.input}}" required>
+        <div class="invalid-feedback">{{this.info}}</div>
+      </div>
+      {{/each}}
+
+      <div class="text-center mt-4">
+        <button type="submit" class="btn btn-primary">Login</button>
+      </div>
+    </form>
+  </div>
+  <div class="mt-5 text-center">
+    - To get the test account from
+    <a href="/users" target="_blank">JSON</a> -
+  </div>
+</div>
