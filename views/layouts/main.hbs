@@ -9,8 +9,8 @@
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <!-- custom CSS -->
   <link rel="stylesheet" href="/css/main.css">
-  {{#if page}}
-  <link rel="stylesheet" href="/css/{{page}}.css">
+  {{#if page.css}}
+  <link rel="stylesheet" href="/css/{{page.css}}.css">
   {{/if}}
   <title>Account Login</title>
 </head>
@@ -41,8 +41,8 @@
       integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
       crossorigin="anonymous"></script>
   </import>
-  {{#if page}}
-  <script src="/js/{{page}}.js"></script>
+  {{#if page.js}}
+  <script src="/js/{{page.js}}.js"></script>
   {{/if}}
 </body>
 </html>
